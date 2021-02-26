@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="550.0" maxWidth="889.0" minHeight="500.0" minWidth="692.0" prefHeight="550.0" prefWidth="730.0" style="-fx-background-color: #F97B31;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gi.controllers.MainWindowController">
+   <children>
+      <Label layoutX="152.0" layoutY="219.0" prefHeight="20.0" prefWidth="126.0" text="Welcome to Vquiz" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Agency FB Bold" size="21.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="right" blendMode="SRC_ATOP" fitHeight="133.0" fitWidth="126.0" layoutX="109.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 180;">
+         <image>
+            <Image url="@icons8-fivem-120.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tae" blendMode="HARD_LIGHT" fitHeight="256.0" fitWidth="273.0" layoutX="72.0" layoutY="294.0" onMouseMoved="#taeMove" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pngkit_hairstyle-png-boy_9139930.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="131.0" layoutY="245.0" prefHeight="24.0" prefWidth="168.0" text="Gives A Meal Vquiz Appeal." textAlignment="JUSTIFY" textFill="WHITE">
+         <font>
+            <Font name="Agency FB" size="20.0" />
+         </font>
+      </Label>
+      <TabPane layoutX="431.0" style="-fx-background-color: #fff;">
+         <tabs>
+            <Tab closable="false" style="-fx-background-color: #dddddd; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 16; -fx-font-weight: bold;" text="            Etudiant           ">
+               <content>
+                  <AnchorPane prefHeight="470.0" prefWidth="295.0" style="-fx-background-color: #fff;">
+                     <children>
+                        <Label layoutX="62.0" layoutY="41.0" text="Connectez-vous">
+                           <font>
+                              <Font name="Agency FB Bold" size="33.0" />
+                           </font>
+                        </Label>
+                        <Button id="button" fx:id="btn" layoutX="65.0" layoutY="320.0" mnemonicParsing="false" onAction="#studentLogin" opacity="0.8" prefHeight="38.0" prefWidth="168.0" style="-fx-background-color: #F97B31; -fx-background-radius: 30;" stylesheets="@Css.css" text="Connexion" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Agency FB Bold" size="20.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="236.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8-student-male-64%20(3).png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="236.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8-lock-52%20(1).png" />
+                           </image>
+                        </ImageView>
+                        <AnchorPane fx:id="error1" layoutY="475.0" prefHeight="46.0" prefWidth="304.0" style="-fx-background-color: #E32B24;" visible="false">
+                           <children>
+                              <Label layoutX="50.0" layoutY="14.0" text="Apogée/Mot de passe incorrect. Réessayer!" textFill="WHITE">
+                                 <font>
+                                    <Font name="Agency FB" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="65.0" layoutY="71.0" text="pour continuer.">
+                           <font>
+                              <Font name="Agency FB Bold" size="33.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="stdBtn2" layoutX="65.0" layoutY="430.0" mnemonicParsing="false" onAction="#goStudent" prefHeight="38.0" prefWidth="168.0" style="-fx-background-color: #FFF;" text="Inscrivez-vous" underline="true">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Agency FB Bold" size="20.0" />
+                           </font>
+                        </Button>
+                        <Line fx:id="line41" endX="8.0" fill="#778f5b" layoutX="116.0" layoutY="387.0" startX="-100.0" strokeLineCap="ROUND" strokeWidth="0.5" />
+                        <Line fx:id="line411" endX="8.0" fill="#778f5b" layoutX="279.0" layoutY="386.0" startX="-100.0" strokeLineCap="ROUND" strokeWidth="0.5" />
+                        <Label layoutX="144.0" layoutY="374.0" text="ou">
+                           <font>
+                              <Font name="Agency FB Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="75.0" layoutY="409.0" text="Vous n'avez pas de compte ?">
+                           <font>
+                              <Font name="Agency FB" size="17.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="stdUser" focusColor="#f97b31" labelFloat="true" layoutX="36.0" layoutY="166.0" onMouseClicked="#closeE" prefHeight="34.0" prefWidth="228.0" promptText="Num Apogée" unFocusColor="BLACK">
+                           <font>
+                              <Font name="Agency FB" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXPasswordField fx:id="stdPass" focusColor="#f97b31" labelFloat="true" layoutX="36.0" layoutY="240.0" onMouseClicked="#closeE" prefHeight="34.0" prefWidth="228.0" promptText="Mot de passe" unFocusColor="BLACK">
+                           <font>
+                              <Font name="Agency FB" size="14.0" />
+                           </font>
+                        </JFXPasswordField>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f97b31" height="3.0" layoutX="35.0" layoutY="-1.0" stroke="#f97b31" strokeType="INSIDE" strokeWidth="1.5" width="81.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab closable="false" style="-fx-background-color: #dddddd; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 16; -fx-font-weight: bold;" text="        Professeur      ">
+               <content>
+                  <AnchorPane prefHeight="519.0" prefWidth="304.0" style="-fx-background-color: #fff;">
+                     <children>
+                        <Label layoutX="62.0" layoutY="41.0" text="Connectez-vous">
+                           <font>
+                              <Font name="Agency FB Bold" size="33.0" />
+                           </font>
+                        </Label>
+                        <Button id="button" fx:id="btn1" layoutX="66.0" layoutY="362.0" mnemonicParsing="false" onAction="#teacherLogin" opacity="0.8" prefHeight="38.0" prefWidth="168.0" style="-fx-background-color: #F97B31; -fx-background-radius: 30;" stylesheets="@Css.css" text="Connexion" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Agency FB Bold" size="20.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="236.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8-teacher-64%20(3).png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="236.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8-lock-52%20(1).png" />
+                           </image>
+                        </ImageView>
+                        <AnchorPane fx:id="error" layoutY="462.0" onMouseClicked="#closeE" onMouseDragged="#closeE" prefHeight="57.0" prefWidth="304.0" style="-fx-background-color: #E32B24;" visible="false">
+                           <children>
+                              <Label layoutX="28.0" layoutY="20.0" text="Nom Utilisateur/Mot de passe incorrect. Réessayer!" textFill="WHITE">
+                                 <font>
+                                    <Font name="Agency FB" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="65.0" layoutY="71.0" text="pour continuer.">
+                           <font>
+                              <Font name="Agency FB Bold" size="33.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="username" focusColor="#f97b31" labelFloat="true" layoutX="36.0" layoutY="166.0" onMouseClicked="#closeE" prefHeight="34.0" prefWidth="228.0" promptText="Nom d'utilisateur" unFocusColor="BLACK">
+                           <font>
+                              <Font name="Agency FB" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXPasswordField fx:id="pass" focusColor="#f97b31" labelFloat="true" layoutX="36.0" layoutY="240.0" onMouseClicked="#closeE" prefHeight="34.0" prefWidth="228.0" promptText="Mot de passe" unFocusColor="BLACK">
+                           <font>
+                              <Font name="Agency FB" size="14.0" />
+                           </font>
+                        </JFXPasswordField>
+                        <Rectangle arcHeight="4.0" arcWidth="4.0" fill="#f97b31" height="3.0" layoutX="166.0" layoutY="-1.0" stroke="#f97b31" strokeType="INSIDE" width="79.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Label fx:id="down" blendMode="SRC_ATOP" layoutX="181.0" layoutY="111.0" prefHeight="75.0" prefWidth="168.0" text="quiz" textFill="WHITE">
+         <font>
+            <Font name="Agency FB Bold" size="78.0" />
+         </font>
+      </Label>
+      <Line fx:id="left" endX="-30.0" layoutX="316.0" layoutY="194.0" startX="-100.0" strokeWidth="3.0" />
+   </children>
+</AnchorPane>

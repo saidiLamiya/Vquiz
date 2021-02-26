@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="900.0" style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gi.controllers.StudentMode1Controller">
+   <children>
+      <Button id="button" fx:id="homeBtn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#home" opacity="0.61" style="-fx-background-color: transparent;" stylesheets="@Css.css">
+         <graphic>
+            <ImageView fitHeight="47.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-exit-64.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <AnchorPane fx:id="info" layoutX="114.0" layoutY="65.0" prefHeight="420.0" prefWidth="672.0" style="-fx-background-color: #1E1E1E; -fx-background-radius: 5;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="79.0" layoutX="301.0" layoutY="14.0" opacity="0.43" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-box-important-80%20(1).png" />
+               </image>
+            </ImageView>
+            <Label layoutX="64.0" layoutY="84.0" text="- Le Quiz a une durée ilimitée.&#10;&#10;- Une fois que vous avez commencer le Quiz vous n'avez plus le droit de revenir en arrière.&#10;&#10;- Vous devriez répondre à toutes les questions.&#10;&#10;- Une réponse vide ne sera pas notée.&#10;&#10;- La réponse doit etre unique.&#10;&#10;- le score finale sera affiché à la fin du Quiz." textFill="#ffffff99">
+               <font>
+                  <Font name="Agency FB" size="19.0" />
+               </font>
+            </Label>
+            <Button id="button" fx:id="contBtn" layoutX="571.0" layoutY="327.0" mnemonicParsing="false" onAction="#contin" opacity="0.77" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: transparent;" stylesheets="@Css.css">
+               <graphic>
+                  <ImageView fitHeight="117.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8-wide-long-right-arrow-64%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

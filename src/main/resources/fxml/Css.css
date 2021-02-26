@@ -1,0 +1,33 @@
+#text-field{
+
+-fx-text-fill : #ffffff;
+-fx-fill : #fff;
+
+}
+#quest{
+
+-fx-text-fill : #fff;
+-fx-fill : #fff;
+
+}
+
+#button:hover{
+-fx-opacity : 1;
+}
+
+
+#btn{-fx-background-color : transparent;
+-fx-border-color : #000;
+-fx-border-width : 0 0 0 5;
+}
+
+#btn:hover{
+-fx-opacity : 1;
+-fx-text-fill : #f97b31;
+}
+#hyperlink:hover{
+-fx-underline : true;
+}
+.title:hover{
+-fx-text-fill : #f97b31;
+}

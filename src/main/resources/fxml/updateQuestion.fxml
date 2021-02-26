@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="700.0" style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gi.controllers.updateQuestionController">
+   <children>
+      <AnchorPane layoutX="33.0" layoutY="43.0" prefHeight="464.0" prefWidth="635.0" style="-fx-background-color: #1E1E1E; -fx-background-radius: 5;">
+         <children>
+            <JFXButton fx:id="clearBtn" depthTest="ENABLE" layoutX="327.0" layoutY="411.0" mnemonicParsing="false" onAction="#clear" opacity="0.85" prefHeight="41.0" prefWidth="114.0" style="-fx-background-color: transparent; -fx-background-radius: 30;" stylesheets="@Css.css" text="Réinitialiser" textAlignment="CENTER" textFill="#f97b31" underline="true" visible="false">
+               <font>
+                  <Font name="Agency FB Bold" size="19.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="9.14" radius="7.035" />
+               </effect>
+            </JFXButton>
+            <JFXButton id="button" fx:id="saveBtn" contentDisplay="CENTER" depthTest="ENABLE" layoutX="464.0" layoutY="411.0" mnemonicParsing="false" onAction="#updateQuestion" opacity="0.85" prefHeight="41.0" prefWidth="141.0" style="-fx-background-color: #F97B31; -fx-background-radius: 30;" stylesheets="@Css.css" text="Modifier" textAlignment="CENTER" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Agency FB Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label fx:id="nb" layoutX="38.0" layoutY="404.0" opacity="0.79" text="NB : La réponce doit etre un des options proposées." textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Agency FB" size="12.0" />
+               </font>
+            </Label>
+            <JFXTextField id="text-field" fx:id="search" focusColor="#1e1e1e" layoutX="238.0" layoutY="20.0" onMouseClicked="#closeE" prefHeight="38.0" prefWidth="159.0" promptText="ID du Question.." style="-fx-background-color: #000; -fx-background-radius: 30; -fx-border-color: #F97B31; -fx-border-radius: 30; -fx-border-width: 0.7;" stylesheets="@Css.css" unFocusColor="#1e1e1e">
+               <font>
+                  <Font name="Agency FB Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXTextField>
+            <Button id="button" fx:id="searchBtn" layoutX="352.0" layoutY="23.0" mnemonicParsing="false" onAction="#search" opacity="0.82" prefHeight="31.0" prefWidth="37.0" style="-fx-background-color: transparent;" stylesheets="@Css.css">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8-search-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <AnchorPane fx:id="succ" layoutX="177.0" layoutY="124.0" prefHeight="200.0" prefWidth="265.0" visible="false">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="58.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8-update-100%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="15.0" layoutY="164.0" text="Question mise à jour avec succès." textFill="#121212">
+                     <font>
+                        <Font name="Agency FB" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <JFXTextArea id="text-field" fx:id="opt1" focusColor="#f97b31" labelFloat="true" layoutX="30.0" layoutY="166.0" onMouseClicked="#closeE" prefHeight="0.0" prefWidth="577.0" promptText="Option 1 : " style="-fx-background-color: #757171; -fx-border-color: #FFF; -fx-border-radius: 5; -fx-border-width: 0.5;" stylesheets="@Css.css" unFocusColor="BLACK" visible="false">
+               <font>
+                  <Font name="Agency FB" size="17.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" right="15.0" top="5.0" />
+               </padding>
+            </JFXTextArea>
+            <JFXTextArea id="text-field" fx:id="opt2" focusColor="#f97b31" labelFloat="true" layoutX="29.0" layoutY="228.0" onMouseClicked="#closeE" prefHeight="38.0" prefWidth="577.0" promptText="Option 2 :" style="-fx-background-color: #757171; -fx-border-color: #FFF; -fx-border-radius: 5; -fx-border-width: 0.5;" stylesheets="@Css.css" unFocusColor="BLACK" visible="false">
+               <font>
+                  <Font name="Agency FB" size="17.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" right="15.0" top="5.0" />
+               </padding>
+            </JFXTextArea>
+            <JFXTextArea id="text-field" fx:id="opt3" focusColor="#f97b31" labelFloat="true" layoutX="29.0" layoutY="290.0" onMouseClicked="#closeE" prefHeight="31.0" prefWidth="577.0" promptText="Option 3 :" style="-fx-background-color: #757171; -fx-border-color: #FFF; -fx-border-radius: 5; -fx-border-width: 0.5;" stylesheets="@Css.css" unFocusColor="BLACK" visible="false">
+               <font>
+                  <Font name="Agency FB" size="17.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" right="15.0" top="5.0" />
+               </padding>
+            </JFXTextArea>
+            <JFXTextArea id="text-field" fx:id="ans" focusColor="#f97b31" labelFloat="true" layoutX="30.0" layoutY="354.0" onMouseClicked="#closeE" prefHeight="6.0" prefWidth="577.0" promptText="Réponse :" style="-fx-background-color: #757171; -fx-border-color: #FFF; -fx-border-radius: 5; -fx-border-width: 0.5;" stylesheets="@Css.css" unFocusColor="BLACK" visible="false">
+               <font>
+                  <Font name="Agency FB" size="17.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" right="15.0" top="5.0" />
+               </padding>
+            </JFXTextArea>
+            <JFXTextArea id="text-field" fx:id="quest" focusColor="#f97b31" labelFloat="true" layoutX="30.0" layoutY="76.0" onMouseClicked="#closeE" prefHeight="66.0" prefWidth="577.0" promptText="Question :" style="-fx-background-color: #757171; -fx-border-color: #FFF; -fx-border-radius: 5; -fx-border-width: 0.5;" stylesheets="@Css.css" unFocusColor="BLACK" visible="false">
+               <font>
+                  <Font name="Agency FB" size="17.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" right="15.0" top="5.0" />
+               </padding>
+            </JFXTextArea>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane fx:id="error" layoutX="1.0" prefHeight="38.0" prefWidth="700.0" style="-fx-background-color: #296D98;" visible="false">
+         <children>
+            <Label layoutX="293.0" layoutY="12.0" text="Veuillez remplir tous les champs !" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="error1" layoutX="-6.0" prefHeight="38.0" prefWidth="707.0" style="-fx-background-color: #296D98;" visible="false">
+         <children>
+            <Label layoutX="326.0" layoutY="10.0" text="ID Invalide !" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

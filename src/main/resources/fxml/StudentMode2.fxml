@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="900.0" style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gi.controllers.StudentMode2Controller">
+   <children>
+      <AnchorPane fx:id="ap" layoutX="230.0" layoutY="43.0" prefHeight="464.0" prefWidth="635.0" style="-fx-background-color: #1E1E1E; -fx-background-radius: 5;">
+         <children>
+            <JFXTextArea id="text-field" fx:id="quest" editable="false" focusColor="#f97b31" labelFloat="true" layoutX="28.0" layoutY="74.0" prefHeight="66.0" prefWidth="577.0" promptText="Question :" style="-fx-background-color: #121212; -fx-border-color: #FFF; -fx-border-radius: 5; -fx-border-width: 0.5;" stylesheets="@Css.css" unFocusColor="BLACK">
+               <font>
+                  <Font name="Agency FB" size="17.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" right="15.0" top="5.0" />
+               </padding>
+            </JFXTextArea>
+            <Label layoutX="278.0" layoutY="15.0" prefHeight="46.0" prefWidth="164.0" text="ID :" textFill="#ffffff84">
+               <font>
+                  <Font name="Agency FB Bold" size="33.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelId" layoutX="326.0" layoutY="14.0" prefHeight="46.0" prefWidth="99.0" text="..." textFill="#f97b31">
+               <font>
+                  <Font name="Agency FB Bold" size="40.0" />
+               </font>
+            </Label>
+            <Button id="button" fx:id="nextBtn" layoutX="523.0" layoutY="370.0" mnemonicParsing="false" onAction="#next" opacity="0.83" style="-fx-background-color: transparent;" stylesheets="@Css.css">
+               <graphic>
+                  <ImageView fitHeight="62.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8-wide-long-right-arrow-64%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <RadioButton fx:id="opt1" layoutX="85.0" layoutY="184.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="503.0" text="option 1" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB" size="19.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="opt3" layoutX="85.0" layoutY="331.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="503.0" text="option 1" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB" size="19.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="opt2" layoutX="85.0" layoutY="257.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="520.0" text="option 1" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB" size="19.0" />
+               </font>
+            </RadioButton>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane prefHeight="550.0" prefWidth="200.0" style="-fx-background-color: #000;">
+         <children>
+            <AnchorPane layoutX="24.0" layoutY="90.0" opacity="0.83" prefHeight="66.0" prefWidth="164.0">
+               <children>
+                  <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="7.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8-student-male-64%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="userLabel" layoutX="65.0" layoutY="23.0" text="Username..." textFill="WHITE" underline="true">
+                     <font>
+                        <Font name="Agency FB" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="24.0" layoutY="231.0" opacity="0.83" prefHeight="66.0" prefWidth="164.0">
+               <children>
+                  <ImageView fitHeight="46.0" fitWidth="42.0" layoutX="7.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8-calendar-12-80.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="dateLabel" layoutX="65.0" layoutY="23.0" text="Date..." textFill="WHITE" underline="true">
+                     <font>
+                        <Font name="Agency FB" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="24.0" layoutY="372.0" opacity="0.83" prefHeight="66.0" prefWidth="164.0">
+               <children>
+                  <ImageView fitHeight="42.0" fitWidth="39.0" layoutX="7.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8-sand-timer-80.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="tamerLabel" layoutX="65.0" layoutY="23.0" text="00 : 00" textFill="WHITE" underline="true">
+                     <font>
+                        <Font name="Agency FB" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
